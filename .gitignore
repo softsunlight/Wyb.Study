@@ -12,3 +12,16 @@
 /test/Wyb.Study.Application.Tests/obj
 /test/Wyb.Study.Dapper.Tests/obj
 /test/Wyb.Study.TestBase/obj
+/src/Wyb.Study.Application/bin/Debug/net6.0
+/src/Wyb.Study.Application.Contracts/bin/Debug/net6.0
+/src/Wyb.Study.Domain/bin/Debug/net6.0
+/src/Wyb.Study.Domain.Shared/bin/Debug/net6.0
+/src/Wyb.Study.Domain.Shared/obj/Debug/net6.0
+/src/Wyb.Study.Http.Api/bin/Debug/net6.0
+/test/Wyb.Study.Application.Tests/bin/Debug/net6.0
+/test/Wyb.Study.Dapper.Tests/bin/Debug/net6.0
+/test/Wyb.Study.TestBase/bin/Debug/net6.0
+/src/Wyb.Study.Domain.Tests/bin/Debug/net6.0
+/src/Wyb.Study.Dapper/bin/Debug/net6.0
+/test/Wyb.Study.Domain.Tests/bin/Debug/net6.0
+/test/Wyb.Study.Domain.Tests/obj

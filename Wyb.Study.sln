@@ -23,7 +23,7 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Wyb.Study.TestBase", "test\
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Wyb.Study.Application.Tests", "test\Wyb.Study.Application.Tests\Wyb.Study.Application.Tests.csproj", "{FDF2E769-7863-4571-A56F-46EAD9826F11}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Wyb.Study.Domain.Tests", "src\Wyb.Study.Domain.Tests\Wyb.Study.Domain.Tests.csproj", "{63564DD6-1D36-487A-ABA6-67E8E8A60235}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Wyb.Study.Domain.Tests", "test\Wyb.Study.Domain.Tests\Wyb.Study.Domain.Tests.csproj", "{63564DD6-1D36-487A-ABA6-67E8E8A60235}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Wyb.Study.Dapper.Tests", "test\Wyb.Study.Dapper.Tests\Wyb.Study.Dapper.Tests.csproj", "{1F2837BC-2937-4EF4-BF04-2367DE993A19}"
 EndProject

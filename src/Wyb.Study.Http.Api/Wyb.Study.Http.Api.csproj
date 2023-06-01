@@ -13,4 +13,10 @@
     <PackageReference Include="Swashbuckle.AspNetCore" Version="6.2.3" />
   </ItemGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\Wyb.Study.Application.Contracts\Wyb.Study.Application.Contracts.csproj" />
+    <ProjectReference Include="..\Wyb.Study.Application\Wyb.Study.Application.csproj" />
+    <ProjectReference Include="..\Wyb.Study.Dapper\Wyb.Study.Dapper.csproj" />
+  </ItemGroup>
+
 </Project>
