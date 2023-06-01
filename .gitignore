@@ -1,0 +1,14 @@
+﻿################################################################################
+# 此 .gitignore 文件已由 Microsoft(R) Visual Studio 自动创建。
+################################################################################
+
+/.vs
+/src/Wyb.Study.Application/obj
+/src/Wyb.Study.Application.Contracts/obj
+/src/Wyb.Study.Dapper/obj
+/src/Wyb.Study.Domain/obj
+/src/Wyb.Study.Http.Api/obj
+/src/Wyb.Study.Domain.Tests/obj
+/test/Wyb.Study.Application.Tests/obj
+/test/Wyb.Study.Dapper.Tests/obj
+/test/Wyb.Study.TestBase/obj
