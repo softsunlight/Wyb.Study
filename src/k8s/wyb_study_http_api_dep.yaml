@@ -1,0 +1,21 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: wyb-study-api-deployment
+  labels:
+    app: wyb-study-api
+spec:
+  replicas: 3
+  selector:
+    matchLabels:
+      app: wyb-study-api
+  template:
+    metadata:
+      labels:
+        app: wyb-study-api
+    spec:
+      containers:
+      - name: wyb-study-api
+        image: 192.168.220.132:5000/wyb_study_api:v1
+        ports:
+        - containerPort: 80

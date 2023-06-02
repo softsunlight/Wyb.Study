@@ -7,25 +7,38 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{E7372BA4-226
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "test", "test", "{CEBA0CF7-9EA7-4A35-B33E-5C70C92E0783}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Wyb.Study.Domain", "src\Wyb.Study.Domain\Wyb.Study.Domain.csproj", "{AC98E8E8-B66B-4BFB-A9FA-2A1A8BFC361F}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Wyb.Study.Domain", "src\Wyb.Study.Domain\Wyb.Study.Domain.csproj", "{AC98E8E8-B66B-4BFB-A9FA-2A1A8BFC361F}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Wyb.Study.Domain.Shared", "src\Wyb.Study.Domain.Shared\Wyb.Study.Domain.Shared.csproj", "{687D8F26-0075-40E9-B982-791FB226FF13}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Wyb.Study.Domain.Shared", "src\Wyb.Study.Domain.Shared\Wyb.Study.Domain.Shared.csproj", "{687D8F26-0075-40E9-B982-791FB226FF13}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Wyb.Study.Dapper", "src\Wyb.Study.Dapper\Wyb.Study.Dapper.csproj", "{3C3B458A-3330-44BD-94FF-B3E963548B8A}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Wyb.Study.Dapper", "src\Wyb.Study.Dapper\Wyb.Study.Dapper.csproj", "{3C3B458A-3330-44BD-94FF-B3E963548B8A}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Wyb.Study.Application", "src\Wyb.Study.Application\Wyb.Study.Application.csproj", "{210B3B54-E912-4B45-AF9C-285C8B81EB63}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Wyb.Study.Application", "src\Wyb.Study.Application\Wyb.Study.Application.csproj", "{210B3B54-E912-4B45-AF9C-285C8B81EB63}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Wyb.Study.Application.Contracts", "src\Wyb.Study.Application.Contracts\Wyb.Study.Application.Contracts.csproj", "{2DC16871-B3E6-43C3-B4AD-9BDC41498AD0}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Wyb.Study.Application.Contracts", "src\Wyb.Study.Application.Contracts\Wyb.Study.Application.Contracts.csproj", "{2DC16871-B3E6-43C3-B4AD-9BDC41498AD0}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Wyb.Study.Http.Api", "src\Wyb.Study.Http.Api\Wyb.Study.Http.Api.csproj", "{42AF8468-76F0-4D7D-BF20-9A9806AFA9CC}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Wyb.Study.Http.Api", "src\Wyb.Study.Http.Api\Wyb.Study.Http.Api.csproj", "{42AF8468-76F0-4D7D-BF20-9A9806AFA9CC}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Wyb.Study.TestBase", "test\Wyb.Study.TestBase\Wyb.Study.TestBase.csproj", "{BB69F7B2-F12D-46FC-B3BA-0E6CB81798EC}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Wyb.Study.TestBase", "test\Wyb.Study.TestBase\Wyb.Study.TestBase.csproj", "{BB69F7B2-F12D-46FC-B3BA-0E6CB81798EC}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Wyb.Study.Application.Tests", "test\Wyb.Study.Application.Tests\Wyb.Study.Application.Tests.csproj", "{FDF2E769-7863-4571-A56F-46EAD9826F11}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Wyb.Study.Application.Tests", "test\Wyb.Study.Application.Tests\Wyb.Study.Application.Tests.csproj", "{FDF2E769-7863-4571-A56F-46EAD9826F11}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Wyb.Study.Domain.Tests", "test\Wyb.Study.Domain.Tests\Wyb.Study.Domain.Tests.csproj", "{63564DD6-1D36-487A-ABA6-67E8E8A60235}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Wyb.Study.Domain.Tests", "test\Wyb.Study.Domain.Tests\Wyb.Study.Domain.Tests.csproj", "{63564DD6-1D36-487A-ABA6-67E8E8A60235}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Wyb.Study.Dapper.Tests", "test\Wyb.Study.Dapper.Tests\Wyb.Study.Dapper.Tests.csproj", "{1F2837BC-2937-4EF4-BF04-2367DE993A19}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Wyb.Study.Dapper.Tests", "test\Wyb.Study.Dapper.Tests\Wyb.Study.Dapper.Tests.csproj", "{1F2837BC-2937-4EF4-BF04-2367DE993A19}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "k8s", "k8s", "{21F78375-48BB-42A8-B0E6-2F5575E1DC4C}"
+	ProjectSection(SolutionItems) = preProject
+		src\k8s\wyb_study_http_api_dep.yaml = src\k8s\wyb_study_http_api_dep.yaml
+		src\k8s\wyb_study_http_api_svc.yaml = src\k8s\wyb_study_http_api_svc.yaml
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "NewFolder1", "NewFolder1", "{A502814C-4FB6-435B-808F-0B877399A621}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "docker", "docker", "{48BFFE72-C655-4516-BFAA-F7051D063870}"
+	ProjectSection(SolutionItems) = preProject
+		src\docker\docker_cmd.txt = src\docker\docker_cmd.txt
+	EndProjectSection
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -88,6 +101,9 @@ Global
 		{FDF2E769-7863-4571-A56F-46EAD9826F11} = {CEBA0CF7-9EA7-4A35-B33E-5C70C92E0783}
 		{63564DD6-1D36-487A-ABA6-67E8E8A60235} = {CEBA0CF7-9EA7-4A35-B33E-5C70C92E0783}
 		{1F2837BC-2937-4EF4-BF04-2367DE993A19} = {CEBA0CF7-9EA7-4A35-B33E-5C70C92E0783}
+		{21F78375-48BB-42A8-B0E6-2F5575E1DC4C} = {E7372BA4-226C-4AE1-AC6B-271754488B2C}
+		{A502814C-4FB6-435B-808F-0B877399A621} = {E7372BA4-226C-4AE1-AC6B-271754488B2C}
+		{48BFFE72-C655-4516-BFAA-F7051D063870} = {E7372BA4-226C-4AE1-AC6B-271754488B2C}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {186E41C0-22B9-44EC-A3F2-1F9DEB18965F}

@@ -1,0 +1,2 @@
+-- 在存放sln的文件夹中执行以下命令构建api镜像
+docker build -f src/Wyb.Study.Http.Api/Dockerfile -t wyb_study_api:v1 .
