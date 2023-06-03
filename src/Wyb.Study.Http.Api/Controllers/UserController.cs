@@ -9,10 +9,12 @@ namespace Wyb.Study.Http.Api.Controllers
     [ApiController]
     public class UserController : ControllerBase
     {
+        private readonly ILogger<UserController> _logger;
         private readonly IUserService _userService;
 
-        public UserController(IUserService userService)
+        public UserController(ILogger<UserController> logger, IUserService userService)
         {
+            _logger = logger;
             _userService = userService;
         }
 
@@ -34,16 +36,17 @@ namespace Wyb.Study.Http.Api.Controllers
                 {
                     return new
                     {
-                        Success = true,
+                        Success = false,
                         Message = "添加失败"
                     };
                 }
             }
             catch (Exception ex)
             {
+                _logger.LogError(ex, ex.Message);
                 return new
                 {
-                    Success = true,
+                    Success = false,
                     Message = "添加失败，" + ex.Message
                 };
             }
@@ -67,16 +70,17 @@ namespace Wyb.Study.Http.Api.Controllers
                 {
                     return new
                     {
-                        Success = true,
+                        Success = false,
                         Message = "删除失败"
                     };
                 }
             }
             catch (Exception ex)
             {
+                _logger.LogError(ex, ex.Message);
                 return new
                 {
-                    Success = true,
+                    Success = false,
                     Message = "删除失败，" + ex.Message
                 };
             }
@@ -100,16 +104,17 @@ namespace Wyb.Study.Http.Api.Controllers
                 {
                     return new
                     {
-                        Success = true,
+                        Success = false,
                         Message = "修改失败"
                     };
                 }
             }
             catch (Exception ex)
             {
+                _logger.LogError(ex, ex.Message);
                 return new
                 {
-                    Success = true,
+                    Success = false,
                     Message = "修改失败，" + ex.Message
                 };
             }
@@ -130,9 +135,10 @@ namespace Wyb.Study.Http.Api.Controllers
             }
             catch (Exception ex)
             {
+                _logger.LogError(ex, ex.Message);
                 return new
                 {
-                    Success = true,
+                    Success = false,
                     Message = "修改失败，" + ex.Message
                 };
             }
@@ -155,9 +161,10 @@ namespace Wyb.Study.Http.Api.Controllers
             }
             catch (Exception ex)
             {
+                _logger.LogError(ex, ex.Message);
                 return new
                 {
-                    Success = true,
+                    Success = false,
                     Message = "获取失败，" + ex.Message,
                     Items = new List<UserDto>(),
                     TotalCount = 0

@@ -29,6 +29,7 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Wyb.Study.Dapper.Tests", "t
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "k8s", "k8s", "{21F78375-48BB-42A8-B0E6-2F5575E1DC4C}"
 	ProjectSection(SolutionItems) = preProject
+		src\k8s\k8s安装笔记.txt = src\k8s\k8s安装笔记.txt
 		src\k8s\wyb_study_http_api_dep.yaml = src\k8s\wyb_study_http_api_dep.yaml
 		src\k8s\wyb_study_http_api_svc.yaml = src\k8s\wyb_study_http_api_svc.yaml
 	EndProjectSection
