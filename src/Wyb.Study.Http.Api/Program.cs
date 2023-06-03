@@ -20,6 +20,8 @@ namespace Wyb.Study.Http.Api
             builder.Services.AddTransient<IUserRepository, UserRepository>();
             #endregion
 
+            builder.Services.AddSkyAPM();
+
             builder.Services.AddControllers();
             // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
             builder.Services.AddEndpointsApiExplorer();

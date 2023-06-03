@@ -25,3 +25,4 @@
 /src/Wyb.Study.Dapper/bin/Debug/net6.0
 /test/Wyb.Study.Domain.Tests/bin/Debug/net6.0
 /test/Wyb.Study.Domain.Tests/obj
+/src/Wyb.Study.Http.Api/logs
