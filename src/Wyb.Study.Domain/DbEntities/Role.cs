@@ -7,18 +7,18 @@ using System.Threading.Tasks;
 namespace Wyb.Study.DbEntities
 {
     /// <summary>
-    /// 用户
+    /// 角色
     /// </summary>
-    public class User : BaseEntity
+    public class Role : BaseEntity
     {
         /// <summary>
-        /// 用户名，唯一
+        /// 角色名称
         /// </summary>
-        public string UserName { get; set; }
+        public string RoleName { get; set; }
 
         /// <summary>
-        /// 用户密码
+        /// 角色编码，唯一
         /// </summary>
-        public string Password { get; set; }
+        public string RoleCode { get; set; }
     }
 }

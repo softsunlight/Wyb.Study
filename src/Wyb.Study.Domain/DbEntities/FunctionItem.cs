@@ -7,18 +7,18 @@ using System.Threading.Tasks;
 namespace Wyb.Study.DbEntities
 {
     /// <summary>
-    /// 用户
+    /// 功能项
     /// </summary>
-    public class User : BaseEntity
+    public class FunctionItem : BaseEntity
     {
         /// <summary>
-        /// 用户名，唯一
+        /// 功能名称
         /// </summary>
-        public string UserName { get; set; }
+        public string FunctionName { get; set; }
 
         /// <summary>
-        /// 用户密码
+        /// 功能路由地址，唯一
         /// </summary>
-        public string Password { get; set; }
+        public string FunctionUrl { get; set; }
     }
 }

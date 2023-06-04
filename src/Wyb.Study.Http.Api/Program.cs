@@ -20,10 +20,12 @@ namespace Wyb.Study.Http.Api
                 // Add services to the container.
                 #region add Services
                 builder.Services.AddTransient<IUserService, UserService>();
+                builder.Services.AddTransient<IRoleService, RoleService>();
                 #endregion
 
                 #region add repositories
                 builder.Services.AddTransient<IUserRepository, UserRepository>();
+                builder.Services.AddTransient<IRoleRepository, RoleRepository>();
                 #endregion
 
                 builder.Services.AddSkyAPM();
@@ -33,8 +35,22 @@ namespace Wyb.Study.Http.Api
                 builder.Services.AddEndpointsApiExplorer();
                 builder.Services.AddSwaggerGen();
 
+                //nlog services
                 builder.Logging.ClearProviders();
                 builder.Host.UseNLog();
+
+                // cors
+                builder.Services.AddCors(options =>
+                {
+                    options.AddPolicy(name: "MyAllowSpecificOrigins",
+                                      policy =>
+                                      {
+                                          policy.AllowAnyOrigin()
+                                            .AllowAnyHeader()
+                                            .AllowAnyMethod()
+                                            ;
+                                      });
+                });
 
                 var app = builder.Build();
 
@@ -44,6 +60,8 @@ namespace Wyb.Study.Http.Api
                     app.UseSwagger();
                     app.UseSwaggerUI();
                 }
+
+                app.UseCors("MyAllowSpecificOrigins");
 
                 app.UseAuthorization();
 
