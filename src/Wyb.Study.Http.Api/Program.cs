@@ -1,3 +1,4 @@
+using Microsoft.AspNetCore.HttpLogging;
 using NLog;
 using NLog.Web;
 using Wyb.Study.IRepositories;
@@ -52,7 +53,14 @@ namespace Wyb.Study.Http.Api
                                       });
                 });
 
+                builder.Services.AddHttpLogging(logging =>
+                {
+                    logging.LoggingFields = HttpLoggingFields.All;
+                });
+
                 var app = builder.Build();
+
+                app.UseHttpLogging();
 
                 // Configure the HTTP request pipeline.
                 if (app.Environment.IsDevelopment())
