@@ -22,6 +22,7 @@ namespace Wyb.Study.Http.Api
                 #region add Services
                 builder.Services.AddTransient<IUserService, UserService>();
                 builder.Services.AddTransient<IRoleService, RoleService>();
+                builder.Services.AddTransient<IKafkaDemoService, KafkaDemoService>();
                 #endregion
 
                 #region add repositories
