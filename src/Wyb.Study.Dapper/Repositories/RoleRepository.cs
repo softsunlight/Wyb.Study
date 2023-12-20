@@ -25,6 +25,7 @@ namespace Wyb.Study.Repositories
         {
             using (MySqlConnection conn = new MySqlConnection(_configuration.GetSection("ConnectionStrings:Mysql").Value))
             {
+                //return await conn.InsertAsync<Role>(role);
                 return await conn.ExecuteAsync("INSERT INTO Role(role_name,role_code,create_time,update_time) VALUES(@RoleName,@RoleCode,@CreateTime,@UpdateTime);", new
                 {
                     RoleName = role.RoleName,
