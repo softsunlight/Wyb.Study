@@ -1,0 +1,46 @@
+{
+  "Routes": [
+    {
+      //获取酒店列表
+      "ServiceName": "hotel_base",
+      "UpstreamPathTemplate": "/api/hotel",
+      "UpstreamHttpMethod": [ "Get" ],
+      "DownstreamPathTemplate": "/hotel",
+      "DownstreamScheme": "http",
+      "LoadBalancerOptions": {
+        "Type": "RoundRobin"
+      },
+      "UseServiceDiscovery": true
+      //"AuthenticationOptions": {
+      //  "AuthenticationProviderKeys": [
+      //    "Bearer"
+      //  ],
+      //  "AllowedScopes": []
+      //}
+    },
+    { //获取酒店列表
+      "ServiceName": "ordering",
+      "UpstreamPathTemplate": "/api/order/{everything}",
+      "UpstreamHttpMethod": [ "Get" ],
+      "DownstreamPathTemplate": "/order/{everything}",
+      "DownstreamScheme": "http",
+      "LoadBalancerOptions": {
+        "Type": "RoundRobin"
+      },
+      "UseServiceDiscovery": true
+      //"DownstreamHostAndPorts": [
+      //  {
+      //    //hotel service
+      //    "Host": "localhost",
+      //    "Port": 5144
+      //  }
+      //]
+    }
+  ],
+  "GlobalConfiguration": {
+    "BaseUrl": "",
+    "ServiceDiscoveryProvider": {
+      "Type": "Nacos"
+    }
+  }
+}

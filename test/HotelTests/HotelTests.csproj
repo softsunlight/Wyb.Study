@@ -17,8 +17,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\..\src\CommonLib\CommonLib.csproj" />
-    <ProjectReference Include="..\..\src\Shop\Shop.Service\Shop.Service.csproj" />
+    <ProjectReference Include="..\..\src\Wyb.Study.Models\Wyb.Study.Models.csproj" />
   </ItemGroup>
 
 </Project>
