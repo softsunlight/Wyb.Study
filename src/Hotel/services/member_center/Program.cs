@@ -12,7 +12,7 @@ builder.Services.AddSwaggerGen();
 
 var app = builder.Build();
 
-app.UseAllElasticApm(builder.Configuration);
+//app.UseAllElasticApm(builder.Configuration);
 
 // Configure the HTTP request pipeline.
 if (app.Environment.IsDevelopment())

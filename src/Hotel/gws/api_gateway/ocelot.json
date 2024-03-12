@@ -10,6 +10,12 @@
       "LoadBalancerOptions": {
         "Type": "RoundRobin"
       },
+      "QoSOptions": {
+        "ExceptionsAllowedBeforeBreaking": 3,
+        "DurationOfBreak": 1000,
+        "TimeoutValue": 5
+      },
+      "Key": "hotel",
       "UseServiceDiscovery": true
       //"AuthenticationOptions": {
       //  "AuthenticationProviderKeys": [
@@ -27,6 +33,18 @@
       "LoadBalancerOptions": {
         "Type": "RoundRobin"
       },
+      "QoSOptions": {
+        "ExceptionsAllowedBeforeBreaking": 3,
+        "DurationOfBreak": 1000,
+        "TimeoutValue": 5000
+      },
+      "RateLimitOptions": {
+        "ClientWhitelist": [],
+        "EnableRateLimiting": true,
+        "Period": "5s",
+        "PeriodTimespan": 1,
+        "Limit": 1
+      },
       "UseServiceDiscovery": true
       //"DownstreamHostAndPorts": [
       //  {
@@ -35,12 +53,79 @@
       //    "Port": 5144
       //  }
       //]
+    },
+    { //获取酒店列表
+      "ServiceName": "membercenter",
+      "UpstreamPathTemplate": "/api/member/{everything}",
+      "UpstreamHttpMethod": [ "Get" ],
+      "DownstreamPathTemplate": "/member/{everything}",
+      "DownstreamScheme": "http",
+      "LoadBalancerOptions": {
+        "Type": "RoundRobin"
+      },
+      "QoSOptions": {
+        "ExceptionsAllowedBeforeBreaking": 3,
+        "DurationOfBreak": 1000,
+        "TimeoutValue": 5000
+      },
+      "Key": "member",
+      "UseServiceDiscovery": true
+      //"DownstreamHostAndPorts": [
+      //  {
+      //    //hotel service
+      //    "Host": "localhost",
+      //    "Port": 5144
+      //  }
+      //]
+    },
+    {
+      "UpstreamHttpMethod": [ "Get" ],
+      "UpstreamPathTemplate": "/laura",
+      "DownstreamPathTemplate": "/home",
+      "DownstreamScheme": "http",
+      "UseServiceDiscovery": true,
+      "ServiceName": "service1",
+      //"DownstreamHostAndPorts": [
+      //  {
+      //    "Host": "localhost",
+      //    "Port": 51881
+      //  }
+      //],
+      "Key": "Laura"
+    },
+    {
+      "UpstreamHttpMethod": [ "Get" ],
+      "UpstreamPathTemplate": "/s2",
+      "DownstreamPathTemplate": "/health",
+      "DownstreamScheme": "http",
+      "UseServiceDiscovery": true,
+      "ServiceName": "service2",
+      //"DownstreamHostAndPorts": [
+      //  {
+      //    "Host": "localhost",
+      //    "Port": 10001
+      //  }
+      //],
+      "Key": "Tom"
     }
   ],
+  //"Aggregates": [
+  //  {
+  //    "UpstreamPathTemplate": "/agg/order/{everything}",
+  //    "RouteKeys": [ "hotel", "member" ]
+  //  },
+  //  {
+  //    "UpstreamPathTemplate": "/agg",
+  //    "RouteKeys": [ "Tom", "Laura" ]
+  //  }
+  //],
   "GlobalConfiguration": {
     "BaseUrl": "",
     "ServiceDiscoveryProvider": {
       "Type": "Nacos"
     }
+    //"RateLimitOptions": {
+    //  "QuotaExceededMessage": "请求过快，请稍后再试"
+    //}
   }
 }

@@ -34,5 +34,44 @@ namespace Wyb.Study.TestBase
 
             _serviceProvider = services.BuildServiceProvider();
         }
+
+        [Test]
+        public void Test1()
+        {
+            ServiceCollection services = new ServiceCollection();
+
+            services.AddSingleton<JsParamBuilder, WechatLoginJsParamBuilder>();
+            services.AddSingleton<JsParamBuilder, WechatLogoutJsParamBuilder>();
+
+            var provider = services.BuildServiceProvider();
+        }
+
+        class TaskTypeConstant
+        {
+            public const string WechatLogin = "wechat_login";
+
+            public const string WechatLogout = "wechat_logout";
+        }
+
+        abstract class JsParamBuilder
+        {
+            public abstract object Build();
+        }
+
+        class WechatLoginJsParamBuilder : JsParamBuilder
+        {
+            public override object Build()
+            {
+                return "wechat_login_param";
+            }
+        }
+
+        class WechatLogoutJsParamBuilder : JsParamBuilder
+        {
+            public override object Build()
+            {
+                return "wechat_logout_param";
+            }
+        }
     }
 }

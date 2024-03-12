@@ -37,7 +37,7 @@ namespace ordering.Controllers
             var order = _orders.FirstOrDefault(x => x.Id == id);
             if (!string.IsNullOrEmpty(order.MemberId))
             {
-                var memberInstance = await _nacosNamingService.SelectOneHealthyInstance("member_center");
+                var memberInstance = await _nacosNamingService.SelectOneHealthyInstance("membercenter");
                 using (var httpClient = new HttpClient())
                 {
                     httpClient.BaseAddress = new Uri($"http://{memberInstance.Ip}:{memberInstance.Port}");
