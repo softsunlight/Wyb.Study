@@ -8,7 +8,6 @@
 
   <ItemGroup>
     <ProjectReference Include="..\Wyb.Study.Application.Contracts\Wyb.Study.Application.Contracts.csproj" />
-    <ProjectReference Include="..\Wyb.Study.Domain.Shared\Wyb.Study.Domain.Shared.csproj" />
   </ItemGroup>
 
 </Project>

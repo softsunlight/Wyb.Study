@@ -6,8 +6,4 @@
     <Nullable>enable</Nullable>
   </PropertyGroup>
 
-  <ItemGroup>
-    <ProjectReference Include="..\Wyb.Study.Domain.Shared\Wyb.Study.Domain.Shared.csproj" />
-  </ItemGroup>
-
 </Project>
