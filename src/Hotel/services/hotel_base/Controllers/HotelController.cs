@@ -32,7 +32,7 @@ namespace hotel_base.Controllers
         [HttpGet]
         public IEnumerable<HotelVM> Get()
         {
-            Task.Delay(10000).Wait();
+            //Task.Delay(10000).Wait();
             _logger.LogInformation($"hotel->get at {DateTime.Now.ToString("yyyy-MM-dd HH:mm:ss")}");
             return _hotels;
         }

@@ -2,6 +2,7 @@ using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.Extensions.Caching.Distributed;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.IdentityModel.Tokens;
+using Nacos.AspNetCore.V2;
 using Ocelot.DependencyInjection;
 using Ocelot.Middleware;
 using Ocelot.Provider.Nacos;
@@ -16,9 +17,12 @@ builder.Host.ConfigureAppConfiguration((hostingContext, config) =>
     config
         .SetBasePath(hostingContext.HostingEnvironment.ContentRootPath)
         .AddJsonFile($"appsettings.{hostingContext.HostingEnvironment.EnvironmentName}.json", true, true)
-        .AddJsonFile($"ocelot.{hostingContext.HostingEnvironment.EnvironmentName}.json", true, true)
+        //.AddJsonFile($"ocelot.{hostingContext.HostingEnvironment.EnvironmentName}.json", true, true)
         .AddEnvironmentVariables();
 });
+
+builder.Host.UseNacosConfig("nacos");
+builder.Services.AddNacosAspNet(builder.Configuration);
 
 builder.Services.AddOcelot().AddNacosDiscovery().AddPolly();
 
