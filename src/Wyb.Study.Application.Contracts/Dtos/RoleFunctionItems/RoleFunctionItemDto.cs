@@ -3,8 +3,9 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using Wyb.Study.Application.Contracts.Dtos;
 
-namespace Wyb.Study.Dtos.RoleFunctionItems
+namespace Wyb.Study.Application.Contracts.Dtos.RoleFunctionItems
 {
     public class RoleFunctionItemDto : BaseDto
     {

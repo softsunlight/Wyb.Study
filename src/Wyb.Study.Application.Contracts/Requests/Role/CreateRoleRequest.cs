@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Wyb.Study.Requests.Role
+namespace Wyb.Study.Application.Contracts.Requests.Role
 {
     public class CreateRoleRequest
     {

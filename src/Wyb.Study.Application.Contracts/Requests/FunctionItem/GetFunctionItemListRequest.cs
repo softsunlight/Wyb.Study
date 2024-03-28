@@ -3,8 +3,9 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using Wyb.Study.Application.Contracts.Requests;
 
-namespace Wyb.Study.Requests.FunctionItem
+namespace Wyb.Study.Application.Contracts.Requests.FunctionItem
 {
     public class GetFunctionItemListRequest : PageRequest
     {

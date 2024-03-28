@@ -3,11 +3,11 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using Wyb.Study.Dtos.UserRoles;
-using Wyb.Study.Requests.UserRole;
-using Wyb.Study.Responses;
+using Wyb.Study.Application.Contracts.Dtos.UserRoles;
+using Wyb.Study.Application.Contracts.Requests.UserRole;
+using Wyb.Study.Application.Contracts.Responses;
 
-namespace Wyb.Study.IServices
+namespace Wyb.Study.Application.Contracts.IServices
 {
     public interface IUserRoleService
     {

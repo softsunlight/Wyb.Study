@@ -3,9 +3,8 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using Wyb.Study.Dtos;
 
-namespace Wyb.Study.Dtos.Users
+namespace Wyb.Study.Application.Contracts.Dtos.Users
 {
     public class GetUserListDto : PageDto
     {

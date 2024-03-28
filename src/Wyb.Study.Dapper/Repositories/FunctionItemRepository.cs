@@ -7,11 +7,11 @@ using System.Data.Common;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using Wyb.Study.DbEntities;
-using Wyb.Study.IRepositories;
-using Wyb.Study.Requests.FunctionItem;
+using Wyb.Study.Application.Contracts.Requests.FunctionItem;
+using Wyb.Study.Domain.DbEntities;
+using Wyb.Study.Domain.IRepositories;
 
-namespace Wyb.Study.Repositories
+namespace Wyb.Study.Dapper.Repositories
 {
     public class FunctionItemRepository : IFunctionItemRepository
     {
@@ -26,10 +26,10 @@ namespace Wyb.Study.Repositories
             {
                 return await conn.ExecuteAsync("INSERT INTO function_item(function_name,function_url,create_time,update_time) VALUES(@FunctionName,@FunctionUrl,@CreateTime,@UpdateTime);", new
                 {
-                    FunctionName = item.FunctionName,
-                    FunctionUrl = item.FunctionUrl,
-                    CreateTime = item.CreateTime,
-                    UpdateTime = item.UpdateTime
+                    item.FunctionName,
+                    item.FunctionUrl,
+                    item.CreateTime,
+                    item.UpdateTime
                 });
             }
         }
@@ -51,9 +51,9 @@ namespace Wyb.Study.Repositories
             {
                 return await conn.ExecuteAsync("UPDATE function_item set function_name=@FunctionName,@function_url=@FunctionUrl,update_time=@UpdateTime WHERE id=@Id", new
                 {
-                    FunctionName = item.FunctionName,
-                    FunctionUrl = item.FunctionUrl,
-                    UpdateTime = item.UpdateTime
+                    item.FunctionName,
+                    item.FunctionUrl,
+                    item.UpdateTime
                 });
             }
         }
@@ -92,7 +92,7 @@ namespace Wyb.Study.Repositories
                     sql += " AND function_url=@FunctionUrl";
                 }
                 sql += $" LIMIT {(request.PageIndex - 1) * request.PageSize},{request.PageSize}";
-                var data = await conn.QueryAsync(sql, new { FunctionName = request.FunctionName, FunctionUrl = request.FunctionUrl, request.PageIndex, request.PageSize });
+                var data = await conn.QueryAsync(sql, new { request.FunctionName, request.FunctionUrl, request.PageIndex, request.PageSize });
                 if (data != null)
                 {
                     return data.Select(p => new FunctionItem()
@@ -121,7 +121,7 @@ namespace Wyb.Study.Repositories
                 {
                     sql += " AND function_url=@FunctionUrl";
                 }
-                return await conn.ExecuteScalarAsync<int>(sql, new { FunctionName = request.FunctionName, FunctionUrl = request.FunctionUrl });
+                return await conn.ExecuteScalarAsync<int>(sql, new { request.FunctionName, request.FunctionUrl });
             }
         }
 

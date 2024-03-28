@@ -4,15 +4,15 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using Wyb.Study.DbEntities;
-using Wyb.Study.Dtos;
-using Wyb.Study.Dtos.RoleFunctionItems;
-using Wyb.Study.IRepositories;
-using Wyb.Study.IServices;
-using Wyb.Study.Requests.RoleFunctionItem;
-using Wyb.Study.Responses;
+using Wyb.Study.Application.Contracts.Dtos;
+using Wyb.Study.Application.Contracts.Dtos.RoleFunctionItems;
+using Wyb.Study.Application.Contracts.IServices;
+using Wyb.Study.Application.Contracts.Requests.RoleFunctionItem;
+using Wyb.Study.Application.Contracts.Responses;
+using Wyb.Study.Domain.DbEntities;
+using Wyb.Study.Domain.IRepositories;
 
-namespace Wyb.Study.Services
+namespace Wyb.Study.Application.Services
 {
     public class RoleFunctionItemService : IRoleFunctionItemService
     {

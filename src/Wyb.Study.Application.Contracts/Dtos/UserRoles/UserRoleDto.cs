@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Wyb.Study.Dtos.UserRoles
+namespace Wyb.Study.Application.Contracts.Dtos.UserRoles
 {
     public class UserRoleDto : BaseDto
     {

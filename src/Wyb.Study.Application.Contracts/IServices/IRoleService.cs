@@ -3,11 +3,11 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using Wyb.Study.Dtos.Roles;
-using Wyb.Study.Requests.Role;
-using Wyb.Study.Responses;
+using Wyb.Study.Application.Contracts.Dtos.Roles;
+using Wyb.Study.Application.Contracts.Requests.Role;
+using Wyb.Study.Application.Contracts.Responses;
 
-namespace Wyb.Study.IServices
+namespace Wyb.Study.Application.Contracts.IServices
 {
     public interface IRoleService
     {

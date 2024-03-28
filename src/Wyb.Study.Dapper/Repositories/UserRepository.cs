@@ -7,11 +7,11 @@ using System.Data.Common;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using Wyb.Study.DbEntities;
-using Wyb.Study.Dtos.Users;
-using Wyb.Study.IRepositories;
+using Wyb.Study.Application.Contracts.Dtos.Users;
+using Wyb.Study.Domain.DbEntities;
+using Wyb.Study.Domain.IRepositories;
 
-namespace Wyb.Study.Repositories
+namespace Wyb.Study.Dapper.Repositories
 {
     public class UserRepository : IUserRepository
     {
@@ -26,10 +26,10 @@ namespace Wyb.Study.Repositories
             {
                 return await conn.ExecuteAsync("INSERT INTO User(user_name,password,create_time,update_time) VALUES(@UserName,@Password,@CreateTime,@UpdateTime);", new
                 {
-                    UserName = user.UserName,
-                    Password = user.Password,
-                    CreateTime = user.CreateTime,
-                    UpdateTime = user.UpdateTime
+                    user.UserName,
+                    user.Password,
+                    user.CreateTime,
+                    user.UpdateTime
                 });
             }
         }
@@ -51,8 +51,8 @@ namespace Wyb.Study.Repositories
             {
                 return await conn.ExecuteAsync("UPDATE User set password=@Password,update_time=@UpdateTime WHERE id=@Id", new
                 {
-                    Password = user.Password,
-                    UpdateTime = user.UpdateTime
+                    user.Password,
+                    user.UpdateTime
                 });
             }
         }
@@ -87,7 +87,7 @@ namespace Wyb.Study.Repositories
                     sql += " WHERE user_name like '%@UserName%'";
                 }
                 sql += $" LIMIT {(getUserListDto.PageIndex - 1) * getUserListDto.PageSize},{getUserListDto.PageSize}";
-                var data = await conn.QueryAsync(sql, new { UserName = getUserListDto.UserName, getUserListDto.PageIndex, getUserListDto.PageSize });
+                var data = await conn.QueryAsync(sql, new { getUserListDto.UserName, getUserListDto.PageIndex, getUserListDto.PageSize });
                 if (data != null)
                 {
                     return data.Select(p => new User()
@@ -112,7 +112,7 @@ namespace Wyb.Study.Repositories
                 {
                     sql += " WHERE user_name like '%@UserName%'";
                 }
-                return await conn.ExecuteScalarAsync<int>(sql, new { UserName = getUserListDto.UserName });
+                return await conn.ExecuteScalarAsync<int>(sql, new { getUserListDto.UserName });
             }
         }
     }

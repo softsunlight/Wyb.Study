@@ -5,8 +5,6 @@ using Polly.CircuitBreaker;
 using Polly.RateLimiting;
 using Polly.Timeout;
 using System.Threading.RateLimiting;
-using Wyb.Study.IServices;
-using Wyb.Study.Requests.Role;
 
 namespace Wyb.Study.Http.Api.Controllers
 {

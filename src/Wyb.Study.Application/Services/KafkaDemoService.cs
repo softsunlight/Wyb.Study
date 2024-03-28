@@ -5,15 +5,10 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using Wyb.Study.DbEntities;
-using Wyb.Study.Dtos;
-using Wyb.Study.Dtos.FunctionItems;
-using Wyb.Study.IRepositories;
-using Wyb.Study.IServices;
-using Wyb.Study.Requests.FunctionItem;
-using Wyb.Study.Responses;
+using Wyb.Study.Application.Contracts.IServices;
+using Wyb.Study.Application.Contracts.Responses;
 
-namespace Wyb.Study.Services
+namespace Wyb.Study.Application.Services
 {
     public class KafkaDemoService : IKafkaDemoService
     {

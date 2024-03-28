@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Wyb.Study.DbEntities
+namespace Wyb.Study.Domain.DbEntities
 {
     /// <summary>
     /// 用户角色

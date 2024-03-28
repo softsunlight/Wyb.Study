@@ -1,10 +1,10 @@
 using Microsoft.AspNetCore.HttpLogging;
 using NLog;
 using NLog.Web;
-using Wyb.Study.IRepositories;
-using Wyb.Study.IServices;
-using Wyb.Study.Repositories;
-using Wyb.Study.Services;
+using Wyb.Study.Application.Contracts.IServices;
+using Wyb.Study.Application.Services;
+using Wyb.Study.Dapper.Repositories;
+using Wyb.Study.Domain.IRepositories;
 
 namespace Wyb.Study.Http.Api
 {

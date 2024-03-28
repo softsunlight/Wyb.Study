@@ -3,11 +3,9 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using Wyb.Study.Dtos.FunctionItems;
-using Wyb.Study.Requests.FunctionItem;
-using Wyb.Study.Responses;
+using Wyb.Study.Application.Contracts.Responses;
 
-namespace Wyb.Study.IServices
+namespace Wyb.Study.Application.Contracts.IServices
 {
     /// <summary>
     /// kafka示例服务接口

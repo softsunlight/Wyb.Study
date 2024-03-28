@@ -3,10 +3,10 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using Wyb.Study.DbEntities;
-using Wyb.Study.Requests.Role;
+using Wyb.Study.Application.Contracts.Requests.Role;
+using Wyb.Study.Domain.DbEntities;
 
-namespace Wyb.Study.IRepositories
+namespace Wyb.Study.Domain.IRepositories
 {
     public interface IRoleRepository
     {

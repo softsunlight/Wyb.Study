@@ -4,7 +4,6 @@ using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.Configuration.Json;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Logging;
-using Shop.Service;
 
 namespace Wyb.Study.TestBase
 {
@@ -25,7 +24,7 @@ namespace Wyb.Study.TestBase
 
             services.AddSingleton(_configuration);
 
-            services.AddServicesAndDaos();
+            //services.AddServicesAndDaos();
 
             services.AddLogging(builder =>
             {

@@ -18,7 +18,6 @@
 
   <ItemGroup>
     <ProjectReference Include="..\..\src\CommonLib\CommonLib.csproj" />
-    <ProjectReference Include="..\..\src\Shop\Shop.Service\Shop.Service.csproj" />
   </ItemGroup>
 
 </Project>

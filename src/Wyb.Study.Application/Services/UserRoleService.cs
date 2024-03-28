@@ -4,15 +4,15 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using Wyb.Study.DbEntities;
-using Wyb.Study.Dtos;
-using Wyb.Study.Dtos.UserRoles;
-using Wyb.Study.IRepositories;
-using Wyb.Study.IServices;
-using Wyb.Study.Requests.UserRole;
-using Wyb.Study.Responses;
+using Wyb.Study.Application.Contracts.Dtos;
+using Wyb.Study.Application.Contracts.Dtos.UserRoles;
+using Wyb.Study.Application.Contracts.IServices;
+using Wyb.Study.Application.Contracts.Requests.UserRole;
+using Wyb.Study.Application.Contracts.Responses;
+using Wyb.Study.Domain.DbEntities;
+using Wyb.Study.Domain.IRepositories;
 
-namespace Wyb.Study.Services
+namespace Wyb.Study.Application.Services
 {
     public class UserRoleService : IUserRoleService
     {

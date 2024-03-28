@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Wyb.Study.Requests.FunctionItem
+namespace Wyb.Study.Application.Contracts.Requests.FunctionItem
 {
     public class UpdateFunctionItemRequest
     {

@@ -7,13 +7,11 @@ using System.Data.Common;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using Wyb.Study.DbEntities;
-using Wyb.Study.Dtos.Users;
-using Wyb.Study.IRepositories;
-using Wyb.Study.Requests.Role;
-using Wyb.Study.Requests.RoleFunctionItem;
+using Wyb.Study.Application.Contracts.Requests.RoleFunctionItem;
+using Wyb.Study.Domain.DbEntities;
+using Wyb.Study.Domain.IRepositories;
 
-namespace Wyb.Study.Repositories
+namespace Wyb.Study.Dapper.Repositories
 {
     public class RoleFunctionItemRepository : IRoleFunctionItemRepository
     {
@@ -28,10 +26,10 @@ namespace Wyb.Study.Repositories
             {
                 return await conn.ExecuteAsync("INSERT INTO role_function_item(role_code,function_url,create_time,update_time) VALUES(@RoleCode,@FunctionUrl,@CreateTime,@UpdateTime);", new
                 {
-                    RoleCode = roleFunctionItem.RoleCode,
-                    FunctionUrl = roleFunctionItem.FunctionUrl,
-                    CreateTime = roleFunctionItem.CreateTime,
-                    UpdateTime = roleFunctionItem.UpdateTime
+                    roleFunctionItem.RoleCode,
+                    roleFunctionItem.FunctionUrl,
+                    roleFunctionItem.CreateTime,
+                    roleFunctionItem.UpdateTime
                 });
             }
         }
@@ -53,9 +51,9 @@ namespace Wyb.Study.Repositories
             {
                 return await conn.ExecuteAsync("UPDATE role_function_item set role_code=@RoleCode,function_url=@FunctionUrl,update_time=@UpdateTime WHERE id=@Id", new
                 {
-                    RoleCode = roleFunctionItem.RoleCode,
-                    FunctionUrl = roleFunctionItem.FunctionUrl,
-                    UpdateTime = roleFunctionItem.UpdateTime
+                    roleFunctionItem.RoleCode,
+                    roleFunctionItem.FunctionUrl,
+                    roleFunctionItem.UpdateTime
                 });
             }
         }
@@ -90,7 +88,7 @@ namespace Wyb.Study.Repositories
                     sql += " AND role_code=@RoleCode";
                 }
                 sql += $" LIMIT {(request.PageIndex - 1) * request.PageSize},{request.PageSize}";
-                var data = await conn.QueryAsync(sql, new { RoleCode = request.RoleCode, request.PageIndex, request.PageSize });
+                var data = await conn.QueryAsync(sql, new { request.RoleCode, request.PageIndex, request.PageSize });
                 if (data != null)
                 {
                     return data.Select(p => new RoleFunctionItem()
@@ -115,7 +113,7 @@ namespace Wyb.Study.Repositories
                 {
                     sql += " AND role_code=@RoleCode";
                 }
-                return await conn.ExecuteScalarAsync<int>(sql, new { RoleCode = request.RoleCode });
+                return await conn.ExecuteScalarAsync<int>(sql, new { request.RoleCode });
             }
         }
 

@@ -3,9 +3,9 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using Wyb.Study.Dtos.Users;
+using Wyb.Study.Application.Contracts.Dtos.Users;
 
-namespace Wyb.Study.IServices
+namespace Wyb.Study.Application.Contracts.IServices
 {
     public interface IUserService
     {

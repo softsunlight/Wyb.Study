@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Wyb.Study.Responses
+namespace Wyb.Study.Application.Contracts.Responses
 {
     public class BaseResponse
     {

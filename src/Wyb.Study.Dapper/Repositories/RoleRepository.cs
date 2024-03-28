@@ -7,12 +7,11 @@ using System.Data.Common;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using Wyb.Study.DbEntities;
-using Wyb.Study.Dtos.Users;
-using Wyb.Study.IRepositories;
-using Wyb.Study.Requests.Role;
+using Wyb.Study.Application.Contracts.Requests.Role;
+using Wyb.Study.Domain.DbEntities;
+using Wyb.Study.Domain.IRepositories;
 
-namespace Wyb.Study.Repositories
+namespace Wyb.Study.Dapper.Repositories
 {
     public class RoleRepository : IRoleRepository
     {
@@ -28,10 +27,10 @@ namespace Wyb.Study.Repositories
                 //return await conn.InsertAsync<Role>(role);
                 return await conn.ExecuteAsync("INSERT INTO Role(role_name,role_code,create_time,update_time) VALUES(@RoleName,@RoleCode,@CreateTime,@UpdateTime);", new
                 {
-                    RoleName = role.RoleName,
-                    RoleCode = role.RoleCode,
-                    CreateTime = role.CreateTime,
-                    UpdateTime = role.UpdateTime
+                    role.RoleName,
+                    role.RoleCode,
+                    role.CreateTime,
+                    role.UpdateTime
                 });
             }
         }
@@ -53,8 +52,8 @@ namespace Wyb.Study.Repositories
             {
                 return await conn.ExecuteAsync("UPDATE role set role_name=@RoleName,update_time=@UpdateTime WHERE id=@Id", new
                 {
-                    RoleName = role.RoleName,
-                    UpdateTime = role.UpdateTime
+                    role.RoleName,
+                    role.UpdateTime
                 });
             }
         }
@@ -93,7 +92,7 @@ namespace Wyb.Study.Repositories
                     sql += " AND role_code=@RoleCode";
                 }
                 sql += $" LIMIT {(request.PageIndex - 1) * request.PageSize},{request.PageSize}";
-                var data = await conn.QueryAsync(sql, new { RoleName = request.RoleName, RoleCode = request.RoleCode, request.PageIndex, request.PageSize });
+                var data = await conn.QueryAsync(sql, new { request.RoleName, request.RoleCode, request.PageIndex, request.PageSize });
                 if (data != null)
                 {
                     return data.Select(p => new Role()
@@ -122,7 +121,7 @@ namespace Wyb.Study.Repositories
                 {
                     sql += " AND role_code=@RoleCode";
                 }
-                return await conn.ExecuteScalarAsync<int>(sql, new { RoleName = request.RoleName, RoleCode = request.RoleCode });
+                return await conn.ExecuteScalarAsync<int>(sql, new { request.RoleName, request.RoleCode });
             }
         }
 

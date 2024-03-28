@@ -1,7 +1,7 @@
 ﻿using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
-using Wyb.Study.Dtos.Users;
-using Wyb.Study.IServices;
+using Wyb.Study.Application.Contracts.Dtos.Users;
+using Wyb.Study.Application.Contracts.IServices;
 
 namespace Wyb.Study.Http.Api.Controllers
 {

@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Wyb.Study.Dtos.Users
+namespace Wyb.Study.Application.Contracts.Dtos.Users
 {
     public class UpdateUserDto
     {
